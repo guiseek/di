@@ -84,13 +84,9 @@ class AppRoot extends HTMLElement {
       select.add(new Option(planeta, planeta))
     })
 
-    const output = document.createElement('output')
+    this.append(select)
 
-    select.onchange = () => {
-      output.innerText = select.value
-    }
-
-    this.append(select, output)
+    console.dir(this.planetas)
   }
 }
 
